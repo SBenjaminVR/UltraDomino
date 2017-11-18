@@ -27,10 +27,12 @@ if(keyboard_check(vk_up) && keyboard_check(vk_down)) {
 	sprite_index = spr_Domino_idle
 }
 
+//Conditional to check if left and right are pressed at the same time
 if(keyboard_check(vk_left) && keyboard_check(vk_right)) {
 	sprite_index = spr_Domino_idle
 }
 
+//Return to idle state after movement
 if(keyboard_check_released(vk_right)) {
 	sprite_index = spr_Domino_idle
 }
