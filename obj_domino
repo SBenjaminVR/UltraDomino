@@ -1,0 +1,48 @@
+//Domino running up movement
+if(keyboard_check(vk_up)) {
+	sprite_index = spr_Domino_run_up
+	y -= 5;
+}
+
+//Domino running down movement
+if(keyboard_check(vk_down)) {
+	sprite_index = spr_Domino_run_down
+	y += 5;
+}
+
+//Domino left walking movement
+if(keyboard_check(vk_left)) {
+	sprite_index = spr_Domino_walk_left
+	x -= 5;
+}
+
+//Domino right walking movement
+if(keyboard_check(vk_right)) {
+	sprite_index = spr_Domino_walk_right
+	x += 5;
+}
+
+//Conditional to check if up and down are pressed at the same time
+if(keyboard_check(vk_up) && keyboard_check(vk_down)) {
+	sprite_index = spr_Domino_idle
+}
+
+if(keyboard_check(vk_left) && keyboard_check(vk_right)) {
+	sprite_index = spr_Domino_idle
+}
+
+if(keyboard_check_released(vk_right)) {
+	sprite_index = spr_Domino_idle
+}
+
+if(keyboard_check_released(vk_left)) {
+	sprite_index = spr_Domino_idle
+}
+
+if(keyboard_check_released(vk_up)) {
+	sprite_index = spr_Domino_idle
+}
+
+if(keyboard_check_released(vk_down)) {
+	sprite_index = spr_Domino_idle
+}
